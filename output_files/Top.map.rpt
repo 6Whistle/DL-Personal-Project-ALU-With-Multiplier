@@ -1,0 +1,1058 @@
+Analysis & Synthesis report for Top
+Thu Dec 02 22:17:35 2021
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|next_state_mul:U0_next_state_mul
+ 11. Parameter Settings for User Entity Instance: ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic
+ 12. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32"
+ 13. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32"
+ 14. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32"
+ 15. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32"
+ 16. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register64_r_en:U5_register_64_r_en"
+ 17. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register32_r_en:U4_register_32_r_en"
+ 18. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register32_r_en:U3_register_32_r_en"
+ 19. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register12_r_en:U2_register_12_r_en"
+ 20. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|counter_mul:U1_counter_mul|cla64:U0_cla64"
+ 21. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|next_state_mul:U0_next_state_mul"
+ 22. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32"
+ 23. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U6_register32_r_en"
+ 24. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U4_register32_r_en"
+ 25. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U3_register32_r_en"
+ 26. Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8"
+ 27. Port Connectivity Checks: "bus:U0_bus|mx3_32bits:U3_mx3_32bits"
+ 28. Port Connectivity Checks: "bus:U0_bus|mx2_32bits:U1_mx2_32bits"
+ 29. Port Connectivity Checks: "bus:U0_bus|mx2_8bits:U1_mx2_8bits"
+ 30. Port Connectivity Checks: "bus:U0_bus|mx2:U1_mx2"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
+ 34. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Dec 02 22:17:35 2021       ;
+; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                   ; Top                                         ;
+; Top-level Entity Name           ; Top                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 1337                                        ;
+; Total pins                      ; 77                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; Top                ; Top                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ; < 0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; register_r.v                     ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/register_r.v      ;         ;
+; ram.v                            ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/ram.v             ;         ;
+; mx3_32bits.v                     ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/mx3_32bits.v      ;         ;
+; mx2_8bits.v                      ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/mx2_8bits.v       ;         ;
+; mx2.v                            ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/mx2.v             ;         ;
+; bus.v                            ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/bus.v             ;         ;
+; address_decoder.v                ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/address_decoder.v ;         ;
+; write_operation.v                ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/write_operation.v ;         ;
+; register32_8.v                   ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/register32_8.v    ;         ;
+; ALU_w_mul.v                      ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/ALU_w_mul.v       ;         ;
+; register32_r_en.v                ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/register32_r_en.v ;         ;
+; gates.v                          ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/gates.v           ;         ;
+; shift_logic.v                    ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/shift_logic.v     ;         ;
+; register64_r_en.v                ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/register64_r_en.v ;         ;
+; register10_r_en.v                ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/register10_r_en.v ;         ;
+; next_state_mul.v                 ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/next_state_mul.v  ;         ;
+; mx2_32bits.v                     ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/mx2_32bits.v      ;         ;
+; multiplier.v                     ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/multiplier.v      ;         ;
+; fa_v2.v                          ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/fa_v2.v           ;         ;
+; counter_mul.v                    ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/counter_mul.v     ;         ;
+; clb4.v                           ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/clb4.v            ;         ;
+; cla64.v                          ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/cla64.v           ;         ;
+; cla4.v                           ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/cla4.v            ;         ;
+; cla32.v                          ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/cla32.v           ;         ;
+; alu32.v                          ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/alu32.v           ;         ;
+; add_logic.v                      ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/add_logic.v       ;         ;
+; Top.v                            ; yes             ; User Verilog HDL File  ; C:/altera_lite/15.1/VL/Project/Top.v             ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 1194      ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 1157      ;
+;     -- 7 input functions                    ; 297       ;
+;     -- 6 input functions                    ; 257       ;
+;     -- 5 input functions                    ; 181       ;
+;     -- 4 input functions                    ; 159       ;
+;     -- <=3 input functions                  ; 263       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 1337      ;
+;                                             ;           ;
+; I/O pins                                    ; 77        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1337      ;
+; Total fan-out                               ; 11292     ;
+; Average fan-out                             ; 4.26      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                   ;
++---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                      ; Library Name ;
++---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |Top                                              ; 1157 (0)          ; 1337 (0)     ; 0                 ; 0          ; 77   ; 0            ; |Top                                                                                                                                                     ; work         ;
+;    |ALU_w_mul:U1_ALU_w_mul|                       ; 779 (5)           ; 278 (0)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul                                                                                                                              ; work         ;
+;       |alu32:U1_alu32|                            ; 767 (229)         ; 140 (0)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32                                                                                                               ; work         ;
+;          |cla32:U7_cla32|                         ; 61 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32                                                                                                ; work         ;
+;             |cla4:U1_cla4|                        ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4                                                                                   ; work         ;
+;                |clb4:U4_clb4|                     ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|clb4:U4_clb4                                                                      ; work         ;
+;                   |_or2:P2|                       ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|clb4:U4_clb4|_or2:P2                                                              ; work         ;
+;                   |_or3:or3C2|                    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|clb4:U4_clb4|_or3:or3C2                                                           ; work         ;
+;                   |_or5:or5Co|                    ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|clb4:U4_clb4|_or5:or5Co                                                           ; work         ;
+;                |fa_v2:U3_fa|                      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|fa_v2:U3_fa                                                                       ; work         ;
+;                   |_xor2:xor2|                    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|fa_v2:U3_fa|_xor2:xor2                                                            ; work         ;
+;                      |_or2:or0|                   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|fa_v2:U3_fa|_xor2:xor2|_or2:or0                                                   ; work         ;
+;             |cla4:U2_cla4|                        ; 7 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U2_cla4                                                                                   ; work         ;
+;                |clb4:U4_clb4|                     ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U2_cla4|clb4:U4_clb4                                                                      ; work         ;
+;                   |_or2:P2|                       ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U2_cla4|clb4:U4_clb4|_or2:P2                                                              ; work         ;
+;                   |_or3:or3C2|                    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U2_cla4|clb4:U4_clb4|_or3:or3C2                                                           ; work         ;
+;                   |_or5:or5Co|                    ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U2_cla4|clb4:U4_clb4|_or5:or5Co                                                           ; work         ;
+;                |fa_v2:U3_fa|                      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U2_cla4|fa_v2:U3_fa                                                                       ; work         ;
+;                   |_xor2:xor2|                    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U2_cla4|fa_v2:U3_fa|_xor2:xor2                                                            ; work         ;
+;                      |_or2:or0|                   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U2_cla4|fa_v2:U3_fa|_xor2:xor2|_or2:or0                                                   ; work         ;
+;             |cla4:U3_cla4|                        ; 8 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U3_cla4                                                                                   ; work         ;
+;                |clb4:U4_clb4|                     ; 7 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U3_cla4|clb4:U4_clb4                                                                      ; work         ;
+;                   |_or2:P2|                       ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U3_cla4|clb4:U4_clb4|_or2:P2                                                              ; work         ;
+;                   |_or3:or3C2|                    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U3_cla4|clb4:U4_clb4|_or3:or3C2                                                           ; work         ;
+;                   |_or5:or5Co|                    ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U3_cla4|clb4:U4_clb4|_or5:or5Co                                                           ; work         ;
+;                |fa_v2:U3_fa|                      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U3_cla4|fa_v2:U3_fa                                                                       ; work         ;
+;                   |_xor2:xor2|                    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U3_cla4|fa_v2:U3_fa|_xor2:xor2                                                            ; work         ;
+;                      |_or2:or0|                   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U3_cla4|fa_v2:U3_fa|_xor2:xor2|_or2:or0                                                   ; work         ;
+;             |cla4:U4_cla4|                        ; 10 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U4_cla4                                                                                   ; work         ;
+;                |clb4:U4_clb4|                     ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U4_cla4|clb4:U4_clb4                                                                      ; work         ;
+;                   |_and2:G1|                      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U4_cla4|clb4:U4_clb4|_and2:G1                                                             ; work         ;
+;                   |_or2:P1|                       ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U4_cla4|clb4:U4_clb4|_or2:P1                                                              ; work         ;
+;                   |_or2:P2|                       ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U4_cla4|clb4:U4_clb4|_or2:P2                                                              ; work         ;
+;                   |_or3:or3C2|                    ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U4_cla4|clb4:U4_clb4|_or3:or3C2                                                           ; work         ;
+;                   |_or5:or5Co|                    ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U4_cla4|clb4:U4_clb4|_or5:or5Co                                                           ; work         ;
+;                |fa_v2:U3_fa|                      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U4_cla4|fa_v2:U3_fa                                                                       ; work         ;
+;                   |_xor2:xor2|                    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U4_cla4|fa_v2:U3_fa|_xor2:xor2                                                            ; work         ;
+;                      |_or2:or0|                   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U4_cla4|fa_v2:U3_fa|_xor2:xor2|_or2:or0                                                   ; work         ;
+;             |cla4:U5_cla4|                        ; 12 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U5_cla4                                                                                   ; work         ;
+;                |clb4:U4_clb4|                     ; 11 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U5_cla4|clb4:U4_clb4                                                                      ; work         ;
+;                   |_and2:G0|                      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U5_cla4|clb4:U4_clb4|_and2:G0                                                             ; work         ;
+;                   |_and2:and2C1|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U5_cla4|clb4:U4_clb4|_and2:and2C1                                                         ; work         ;
+;                   |_or2:P0|                       ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U5_cla4|clb4:U4_clb4|_or2:P0                                                              ; work         ;
+;                   |_or3:or3C2|                    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U5_cla4|clb4:U4_clb4|_or3:or3C2                                                           ; work         ;
+;                   |_or5:or5Co|                    ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U5_cla4|clb4:U4_clb4|_or5:or5Co                                                           ; work         ;
+;                |fa_v2:U3_fa|                      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U5_cla4|fa_v2:U3_fa                                                                       ; work         ;
+;                   |_xor2:xor2|                    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U5_cla4|fa_v2:U3_fa|_xor2:xor2                                                            ; work         ;
+;                      |_or2:or0|                   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U5_cla4|fa_v2:U3_fa|_xor2:xor2|_or2:or0                                                   ; work         ;
+;             |cla4:U6_cla4|                        ; 7 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U6_cla4                                                                                   ; work         ;
+;                |clb4:U4_clb4|                     ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U6_cla4|clb4:U4_clb4                                                                      ; work         ;
+;                   |_or2:P2|                       ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U6_cla4|clb4:U4_clb4|_or2:P2                                                              ; work         ;
+;                   |_or3:or3C2|                    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U6_cla4|clb4:U4_clb4|_or3:or3C2                                                           ; work         ;
+;                   |_or5:or5Co|                    ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U6_cla4|clb4:U4_clb4|_or5:or5Co                                                           ; work         ;
+;                |fa_v2:U3_fa|                      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U6_cla4|fa_v2:U3_fa                                                                       ; work         ;
+;                   |_xor2:xor2|                    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U6_cla4|fa_v2:U3_fa|_xor2:xor2                                                            ; work         ;
+;                      |_or2:or0|                   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U6_cla4|fa_v2:U3_fa|_xor2:xor2|_or2:or0                                                   ; work         ;
+;             |cla4:U7_cla4|                        ; 8 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U7_cla4                                                                                   ; work         ;
+;                |clb4:U4_clb4|                     ; 8 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U7_cla4|clb4:U4_clb4                                                                      ; work         ;
+;                   |_and2:G2|                      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U7_cla4|clb4:U4_clb4|_and2:G2                                                             ; work         ;
+;                   |_or2:P2|                       ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U7_cla4|clb4:U4_clb4|_or2:P2                                                              ; work         ;
+;                   |_or3:or3C2|                    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U7_cla4|clb4:U4_clb4|_or3:or3C2                                                           ; work         ;
+;                   |_or4:or4C3|                    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U7_cla4|clb4:U4_clb4|_or4:or4C3                                                           ; work         ;
+;                   |_or5:or5Co|                    ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U7_cla4|clb4:U4_clb4|_or5:or5Co                                                           ; work         ;
+;             |cla4:U8_cla4|                        ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U8_cla4                                                                                   ; work         ;
+;                |clb4:U4_clb4|                     ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U8_cla4|clb4:U4_clb4                                                                      ; work         ;
+;                   |_or3:or3C2|                    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U8_cla4|clb4:U4_clb4|_or3:or3C2                                                           ; work         ;
+;                   |_or4:or4C3|                    ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U8_cla4|clb4:U4_clb4|_or4:or4C3                                                           ; work         ;
+;          |multiplier:U8_multiplier|               ; 412 (0)           ; 140 (0)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier                                                                                      ; work         ;
+;             |add_logic:U6_add_logic|              ; 325 (143)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic                                                               ; work         ;
+;                |cla32:U0_cla32|                   ; 45 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32                                                ; work         ;
+;                   |cla4:U1_cla4|                  ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U1_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U1_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_and4:and4Co|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U1_cla4|clb4:U4_clb4|_and4:and4Co         ; work         ;
+;                         |_or4:or4C3|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U1_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U1_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U2_cla4|                  ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U2_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U2_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or4:or4C3|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U2_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U2_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                      |fa_v2:U1_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U2_cla4|fa_v2:U1_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U2_cla4|fa_v2:U1_fa|_xor2:xor1            ; work         ;
+;                            |_and2:and1|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U2_cla4|fa_v2:U1_fa|_xor2:xor1|_and2:and1 ; work         ;
+;                   |cla4:U3_cla4|                  ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U3_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 8 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U3_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or2:P1|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U3_cla4|clb4:U4_clb4|_or2:P1              ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U3_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or4:or4C3|              ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U3_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U3_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                      |fa_v2:U0_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U3_cla4|fa_v2:U0_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U3_cla4|fa_v2:U0_fa|_xor2:xor1            ; work         ;
+;                            |_and2:and1|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U3_cla4|fa_v2:U0_fa|_xor2:xor1|_and2:and1 ; work         ;
+;                   |cla4:U4_cla4|                  ; 7 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U4_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 7 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U4_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_and2:G1|                ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U4_cla4|clb4:U4_clb4|_and2:G1             ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U4_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or4:or4C3|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U4_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U4_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U5_cla4|                  ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U5_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U5_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U5_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or4:or4C3|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U5_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U5_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                      |fa_v2:U0_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U5_cla4|fa_v2:U0_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U5_cla4|fa_v2:U0_fa|_xor2:xor1            ; work         ;
+;                            |_or2:or0|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U5_cla4|fa_v2:U0_fa|_xor2:xor1|_or2:or0   ; work         ;
+;                   |cla4:U6_cla4|                  ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U6_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U6_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_and2:G0|                ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U6_cla4|clb4:U4_clb4|_and2:G0             ; work         ;
+;                         |_or2:or2C1|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U6_cla4|clb4:U4_clb4|_or2:or2C1           ; work         ;
+;                         |_or4:or4C3|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U6_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                      |fa_v2:U2_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U6_cla4|fa_v2:U2_fa                       ; work         ;
+;                         |_xor2:xor2|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U6_cla4|fa_v2:U2_fa|_xor2:xor2            ; work         ;
+;                            |_or2:or0|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U6_cla4|fa_v2:U2_fa|_xor2:xor2|_or2:or0   ; work         ;
+;                      |fa_v2:U3_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U6_cla4|fa_v2:U3_fa                       ; work         ;
+;                         |_xor2:xor2|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U6_cla4|fa_v2:U3_fa|_xor2:xor2            ; work         ;
+;                            |_or2:or0|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U6_cla4|fa_v2:U3_fa|_xor2:xor2|_or2:or0   ; work         ;
+;                   |cla4:U7_cla4|                  ; 8 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or3:or3C2|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or5:or5Co|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                      |fa_v2:U0_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U0_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U0_fa|_xor2:xor1            ; work         ;
+;                            |_or2:or0|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U0_fa|_xor2:xor1|_or2:or0   ; work         ;
+;                      |fa_v2:U1_fa|                ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U1_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U1_fa|_xor2:xor1            ; work         ;
+;                            |_and2:and1|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U1_fa|_xor2:xor1|_and2:and1 ; work         ;
+;                         |_xor2:xor2|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U1_fa|_xor2:xor2            ; work         ;
+;                            |_or2:or0|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U1_fa|_xor2:xor2|_or2:or0   ; work         ;
+;                      |fa_v2:U2_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U2_fa                       ; work         ;
+;                         |_xor2:xor2|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U2_fa|_xor2:xor2            ; work         ;
+;                            |_or2:or0|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U2_fa|_xor2:xor2|_or2:or0   ; work         ;
+;                      |fa_v2:U3_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U3_fa                       ; work         ;
+;                         |_xor2:xor2|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U3_fa|_xor2:xor2            ; work         ;
+;                            |_or2:or0|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U7_cla4|fa_v2:U3_fa|_xor2:xor2|_or2:or0   ; work         ;
+;                   |cla4:U8_cla4|                  ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U8_cla4                                   ; work         ;
+;                      |fa_v2:U1_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U8_cla4|fa_v2:U1_fa                       ; work         ;
+;                         |_xor2:xor2|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U8_cla4|fa_v2:U1_fa|_xor2:xor2            ; work         ;
+;                            |_or2:or0|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U8_cla4|fa_v2:U1_fa|_xor2:xor2|_or2:or0   ; work         ;
+;                      |fa_v2:U2_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U8_cla4|fa_v2:U2_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U8_cla4|fa_v2:U2_fa|_xor2:xor1            ; work         ;
+;                            |_or2:or0|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32|cla4:U8_cla4|fa_v2:U2_fa|_xor2:xor1|_or2:or0   ; work         ;
+;                |cla32:U1_cla32|                   ; 42 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32                                                ; work         ;
+;                   |cla4:U1_cla4|                  ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U1_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U1_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or4:or4C3|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U1_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U1_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U2_cla4|                  ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U2_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U2_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U2_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or4:or4C3|              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U2_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                   |cla4:U3_cla4|                  ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U3_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U3_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U3_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or4:or4C3|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U3_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U3_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U4_cla4|                  ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U4_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U4_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U4_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or4:or4C3|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U4_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                   |cla4:U5_cla4|                  ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U5_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 8 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U5_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_and2:G0|                ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U5_cla4|clb4:U4_clb4|_and2:G0             ; work         ;
+;                         |_or2:or2C1|              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U5_cla4|clb4:U4_clb4|_or2:or2C1           ; work         ;
+;                         |_or4:or4C3|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U5_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U5_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                      |fa_v2:U1_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U5_cla4|fa_v2:U1_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U5_cla4|fa_v2:U1_fa|_xor2:xor1            ; work         ;
+;                            |_and2:and1|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U5_cla4|fa_v2:U1_fa|_xor2:xor1|_and2:and1 ; work         ;
+;                   |cla4:U6_cla4|                  ; 7 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U6_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U6_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_and2:G1|                ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U6_cla4|clb4:U4_clb4|_and2:G1             ; work         ;
+;                         |_or2:P1|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U6_cla4|clb4:U4_clb4|_or2:P1              ; work         ;
+;                         |_or3:or3C2|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U6_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or4:or4C3|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U6_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U6_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                      |fa_v2:U0_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U6_cla4|fa_v2:U0_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U6_cla4|fa_v2:U0_fa|_xor2:xor1            ; work         ;
+;                            |_and2:and1|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U6_cla4|fa_v2:U0_fa|_xor2:xor1|_and2:and1 ; work         ;
+;                   |cla4:U7_cla4|                  ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U7_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U7_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U7_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or4:or4C3|              ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U7_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U7_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U8_cla4|                  ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U8_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U8_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U8_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                      |fa_v2:U2_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U8_cla4|fa_v2:U2_fa                       ; work         ;
+;                         |_xor2:xor2|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U8_cla4|fa_v2:U2_fa|_xor2:xor2            ; work         ;
+;                            |_or2:or0|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U8_cla4|fa_v2:U2_fa|_xor2:xor2|_or2:or0   ; work         ;
+;                      |fa_v2:U3_fa|                ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U8_cla4|fa_v2:U3_fa                       ; work         ;
+;                         |_xor2:xor2|              ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U8_cla4|fa_v2:U3_fa|_xor2:xor2            ; work         ;
+;                            |_or2:or0|             ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32|cla4:U8_cla4|fa_v2:U3_fa|_xor2:xor2|_or2:or0   ; work         ;
+;                |cla32:U2_cla32|                   ; 51 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32                                                ; work         ;
+;                   |cla4:U1_cla4|                  ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U1_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U1_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or5:or5Co|              ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U1_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U2_cla4|                  ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U2_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 7 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U2_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or2:P1|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U2_cla4|clb4:U4_clb4|_or2:P1              ; work         ;
+;                         |_or2:P2|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U2_cla4|clb4:U4_clb4|_or2:P2              ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U2_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or5:or5Co|              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U2_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                      |fa_v2:U1_fa|                ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U2_cla4|fa_v2:U1_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U2_cla4|fa_v2:U1_fa|_xor2:xor1            ; work         ;
+;                            |_and2:and0|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U2_cla4|fa_v2:U1_fa|_xor2:xor1|_and2:and0 ; work         ;
+;                            |_and2:and1|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U2_cla4|fa_v2:U1_fa|_xor2:xor1|_and2:and1 ; work         ;
+;                   |cla4:U3_cla4|                  ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U3_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U3_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_and2:and2C1|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U3_cla4|clb4:U4_clb4|_and2:and2C1         ; work         ;
+;                         |_or2:P0|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U3_cla4|clb4:U4_clb4|_or2:P0              ; work         ;
+;                         |_or2:P2|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U3_cla4|clb4:U4_clb4|_or2:P2              ; work         ;
+;                         |_or4:or4C3|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U3_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U3_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U4_cla4|                  ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U4_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U4_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or2:P2|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U4_cla4|clb4:U4_clb4|_or2:P2              ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U4_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or5:or5Co|              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U4_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U5_cla4|                  ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U5_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U5_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or2:P2|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U5_cla4|clb4:U4_clb4|_or2:P2              ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U5_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or5:or5Co|              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U5_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U6_cla4|                  ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U6_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U6_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or2:P2|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U6_cla4|clb4:U4_clb4|_or2:P2              ; work         ;
+;                         |_or4:or4C3|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U6_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U6_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U7_cla4|                  ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U7_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 7 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U7_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or2:P1|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U7_cla4|clb4:U4_clb4|_or2:P1              ; work         ;
+;                         |_or2:P2|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U7_cla4|clb4:U4_clb4|_or2:P2              ; work         ;
+;                         |_or3:or3C2|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U7_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or5:or5Co|              ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U7_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                      |fa_v2:U1_fa|                ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U7_cla4|fa_v2:U1_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U7_cla4|fa_v2:U1_fa|_xor2:xor1            ; work         ;
+;                            |_and2:and0|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U7_cla4|fa_v2:U1_fa|_xor2:xor1|_and2:and0 ; work         ;
+;                            |_and2:and1|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U7_cla4|fa_v2:U1_fa|_xor2:xor1|_and2:and1 ; work         ;
+;                   |cla4:U8_cla4|                  ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U8_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U8_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_and2:G0|                ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U8_cla4|clb4:U4_clb4|_and2:G0             ; work         ;
+;                         |_or2:or2C1|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32|cla4:U8_cla4|clb4:U4_clb4|_or2:or2C1           ; work         ;
+;                |cla32:U3_cla32|                   ; 44 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32                                                ; work         ;
+;                   |cla4:U1_cla4|                  ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U1_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U1_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or5:or5Co|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U1_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U2_cla4|                  ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U2_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U2_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_and2:G2|                ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U2_cla4|clb4:U4_clb4|_and2:G2             ; work         ;
+;                         |_or2:P2|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U2_cla4|clb4:U4_clb4|_or2:P2              ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U2_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or4:or4C3|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U2_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                         |_or5:or5Co|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U2_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                      |fa_v2:U1_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U2_cla4|fa_v2:U1_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U2_cla4|fa_v2:U1_fa|_xor2:xor1            ; work         ;
+;                            |_and2:and0|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U2_cla4|fa_v2:U1_fa|_xor2:xor1|_and2:and0 ; work         ;
+;                   |cla4:U3_cla4|                  ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U3_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U3_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or2:P2|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U3_cla4|clb4:U4_clb4|_or2:P2              ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U3_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or5:or5Co|              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U3_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U4_cla4|                  ; 8 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U4_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 8 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U4_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U4_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or5:or5Co|              ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U4_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U5_cla4|                  ; 7 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U5_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 7 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U5_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or2:P1|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U5_cla4|clb4:U4_clb4|_or2:P1              ; work         ;
+;                         |_or2:P2|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U5_cla4|clb4:U4_clb4|_or2:P2              ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U5_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or5:or5Co|              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U5_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U6_cla4|                  ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U6_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U6_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_and2:G2|                ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U6_cla4|clb4:U4_clb4|_and2:G2             ; work         ;
+;                         |_and2:and2C1|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U6_cla4|clb4:U4_clb4|_and2:and2C1         ; work         ;
+;                         |_or2:P0|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U6_cla4|clb4:U4_clb4|_or2:P0              ; work         ;
+;                         |_or2:P2|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U6_cla4|clb4:U4_clb4|_or2:P2              ; work         ;
+;                         |_or5:or5Co|              ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U6_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                   |cla4:U7_cla4|                  ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U7_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U7_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or3:or3C2|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U7_cla4|clb4:U4_clb4|_or3:or3C2           ; work         ;
+;                         |_or5:or5Co|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U7_cla4|clb4:U4_clb4|_or5:or5Co           ; work         ;
+;                      |fa_v2:U2_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U7_cla4|fa_v2:U2_fa                       ; work         ;
+;                         |_xor2:xor1|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U7_cla4|fa_v2:U2_fa|_xor2:xor1            ; work         ;
+;                            |_and2:and1|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U7_cla4|fa_v2:U2_fa|_xor2:xor1|_and2:and1 ; work         ;
+;                   |cla4:U8_cla4|                  ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U8_cla4                                   ; work         ;
+;                      |clb4:U4_clb4|               ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U8_cla4|clb4:U4_clb4                      ; work         ;
+;                         |_or4:or4C3|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U8_cla4|clb4:U4_clb4|_or4:or4C3           ; work         ;
+;                      |fa_v2:U3_fa|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U8_cla4|fa_v2:U3_fa                       ; work         ;
+;                         |_xor2:xor2|              ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U8_cla4|fa_v2:U3_fa|_xor2:xor2            ; work         ;
+;                            |_or2:or0|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32|cla4:U8_cla4|fa_v2:U3_fa|_xor2:xor2|_or2:or0   ; work         ;
+;             |counter_mul:U1_counter_mul|          ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|counter_mul:U1_counter_mul                                                           ; work         ;
+;             |next_state_mul:U0_next_state_mul|    ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|next_state_mul:U0_next_state_mul                                                     ; work         ;
+;             |register12_r_en:U2_register_12_r_en| ; 0 (0)             ; 12 (12)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register12_r_en:U2_register_12_r_en                                                  ; work         ;
+;             |register32_r_en:U3_register_32_r_en| ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register32_r_en:U3_register_32_r_en                                                  ; work         ;
+;             |register32_r_en:U4_register_32_r_en| ; 2 (2)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register32_r_en:U4_register_32_r_en                                                  ; work         ;
+;             |register64_r_en:U5_register_64_r_en| ; 0 (0)             ; 64 (64)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register64_r_en:U5_register_64_r_en                                                  ; work         ;
+;             |shift_logic:U7_shift_logic|          ; 70 (70)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|shift_logic:U7_shift_logic                                                           ; work         ;
+;          |mx2_32bits:U6_mx2_32bits|               ; 65 (65)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|mx2_32bits:U6_mx2_32bits                                                                                      ; work         ;
+;       |register32_8:U1_register32_8|              ; 3 (0)             ; 136 (0)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8                                                                                                 ; work         ;
+;          |register32_r_en:U0_register32_r_en|     ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U0_register32_r_en                                                              ; work         ;
+;          |register32_r_en:U1_register32_r_en|     ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U1_register32_r_en                                                              ; work         ;
+;          |register32_r_en:U2_register32_r_en|     ; 0 (0)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U2_register32_r_en                                                              ; work         ;
+;          |register32_r_en:U3_register32_r_en|     ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U3_register32_r_en                                                              ; work         ;
+;          |register32_r_en:U4_register32_r_en|     ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U4_register32_r_en                                                              ; work         ;
+;          |register32_r_en:U5_register32_r_en|     ; 2 (2)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U5_register32_r_en                                                              ; work         ;
+;          |register32_r_en:U6_register32_r_en|     ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U6_register32_r_en                                                              ; work         ;
+;          |register32_r_en:U7_register32_r_en|     ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U7_register32_r_en                                                              ; work         ;
+;       |register_r:U1_0_register_r|                ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|register_r:U1_0_register_r                                                                                                   ; work         ;
+;       |register_r:U1_1_register_r|                ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|register_r:U1_1_register_r                                                                                                   ; work         ;
+;       |write_operation:U0_write_operation|        ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|ALU_w_mul:U1_ALU_w_mul|write_operation:U0_write_operation                                                                                           ; work         ;
+;    |bus:U0_bus|                                   ; 52 (0)            ; 3 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|bus:U0_bus                                                                                                                                          ; work         ;
+;       |address_decoder:U2_address_decoder|        ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|bus:U0_bus|address_decoder:U2_address_decoder                                                                                                       ; work         ;
+;       |mx2:U1_mx2|                                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|bus:U0_bus|mx2:U1_mx2                                                                                                                               ; work         ;
+;          |_nand2:U2_nand2|                        ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|bus:U0_bus|mx2:U1_mx2|_nand2:U2_nand2                                                                                                               ; work         ;
+;       |mx2_8bits:U1_mx2_8bits|                    ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|bus:U0_bus|mx2_8bits:U1_mx2_8bits                                                                                                                   ; work         ;
+;       |mx3_32bits:U3_mx3_32bits|                  ; 44 (44)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Top|bus:U0_bus|mx3_32bits:U3_mx3_32bits                                                                                                                 ; work         ;
+;       |register_r:U0_resgister_r|                 ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Top|bus:U0_bus|register_r:U0_resgister_r                                                                                                                ; work         ;
+;       |register_r:U3_0_register|                  ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Top|bus:U0_bus|register_r:U3_0_register                                                                                                                 ; work         ;
+;       |register_r:U3_1_register|                  ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Top|bus:U0_bus|register_r:U3_1_register                                                                                                                 ; work         ;
+;    |ram:U2_ram|                                   ; 326 (326)         ; 1056 (1056)  ; 0                 ; 0          ; 0    ; 0            ; |Top|ram:U2_ram                                                                                                                                          ; work         ;
++---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1337  ;
+; Number of registers using Synchronous Clear  ; 1189  ;
+; Number of registers using Synchronous Load   ; 31    ;
+; Number of registers using Asynchronous Clear ; 281   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1156  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Top|ram:U2_ram|S_dout[10]                                                                                    ;
+; 4:1                ; 33 bits   ; 66 LEs        ; 0 LEs                ; 66 LEs                 ; Yes        ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register32_r_en:U3_register_32_r_en|q[16] ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register32_r_en:U4_register_32_r_en|q[3]  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Top|ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|result2[29]                                                        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Top|bus:U0_bus|mx3_32bits:U3_mx3_32bits|y[1]                                                                 ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |Top|bus:U0_bus|mx3_32bits:U3_mx3_32bits|y[3]                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|next_state_mul:U0_next_state_mul ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------+
+; CLEAR          ; 00    ; Unsigned Binary                                                                                                     ;
+; FINISH         ; 01    ; Unsigned Binary                                                                                                     ;
+; START          ; 10    ; Unsigned Binary                                                                                                     ;
+; DOING          ; 11    ; Unsigned Binary                                                                                                     ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
+; ADD_0          ; 000   ; Unsigned Binary                                                                                           ;
+; ADD_M_1        ; 001   ; Unsigned Binary                                                                                           ;
+; ADD_M_2        ; 010   ; Unsigned Binary                                                                                           ;
+; ADD_2M         ; 011   ; Unsigned Binary                                                                                           ;
+; SUB_2M         ; 100   ; Unsigned Binary                                                                                           ;
+; SUB_M_1        ; 101   ; Unsigned Binary                                                                                           ;
+; SUB_M_2        ; 110   ; Unsigned Binary                                                                                           ;
+; SUB_0          ; 111   ; Unsigned Binary                                                                                           ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U3_cla32" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------+
+; ci   ; Input ; Info     ; Stuck at VCC                                                                                           ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U2_cla32" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------+
+; ci   ; Input ; Info     ; Stuck at VCC                                                                                           ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U1_cla32" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------+
+; b[0] ; Input ; Info     ; Stuck at GND                                                                                           ;
+; ci   ; Input ; Info     ; Stuck at GND                                                                                           ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic|cla32:U0_cla32" ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------+
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                   ;
+; ci   ; Input  ; Info     ; Stuck at GND                                                                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register64_r_en:U5_register_64_r_en" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                              ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                                                                         ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register32_r_en:U4_register_32_r_en" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                              ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                                                                         ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register32_r_en:U3_register_32_r_en" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                              ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                                                                         ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register12_r_en:U2_register_12_r_en" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                              ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                                                                         ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|counter_mul:U1_counter_mul|cla64:U0_cla64"                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; s    ; Output ; Warning  ; Output or bidir port (64 bits) is wider than the port expression (8 bits) it drives; bit(s) "s[63..8]" have no fanouts                      ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                         ;
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "a[63..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "b[63..8]" will be connected to GND. ;
+; b    ; Input  ; Info     ; Stuck at VCC                                                                                                                                ;
+; ci   ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|next_state_mul:U0_next_state_mul"                                    ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                       ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; next_state ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (2 bits) it drives; bit(s) "next_state[7..2]" have no fanouts ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32"                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U6_register32_r_en" ;
++----------+-------+----------+--------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                              ;
++----------+-------+----------+--------------------------------------------------------------------------------------+
+; en       ; Input ; Info     ; Stuck at VCC                                                                         ;
+; d[31..2] ; Input ; Info     ; Stuck at GND                                                                         ;
++----------+-------+----------+--------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U4_register32_r_en" ;
++------+-------+----------+------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                  ;
++------+-------+----------+------------------------------------------------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                                                             ;
++------+-------+----------+------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U3_register32_r_en" ;
++------+-------+----------+------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                  ;
++------+-------+----------+------------------------------------------------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                                                             ;
++------+-------+----------+------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8"                                         ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; d_out2[31..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; d_out5[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; d_out6[31..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; d_out7[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "bus:U0_bus|mx3_32bits:U3_mx3_32bits" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; d0   ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "bus:U0_bus|mx2_32bits:U1_mx2_32bits" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; d0   ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "bus:U0_bus|mx2_8bits:U1_mx2_8bits" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; d0   ; Input ; Info     ; Stuck at GND                        ;
++------+-------+----------+-------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "bus:U0_bus|mx2:U1_mx2" ;
++------+-------+----------+-------------------------+
+; Port ; Type  ; Severity ; Details                 ;
++------+-------+----------+-------------------------+
+; d0   ; Input ; Info     ; Stuck at GND            ;
++------+-------+----------+-------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 1337                        ;
+;     CLR               ; 148                         ;
+;     CLR SCLR          ; 1                           ;
+;     ENA CLR SCLR      ; 101                         ;
+;     ENA CLR SCLR SLD  ; 31                          ;
+;     ENA SCLR          ; 1024                        ;
+;     SCLR              ; 32                          ;
+; arriav_lcell_comb     ; 1157                        ;
+;     extend            ; 297                         ;
+;         7 data inputs ; 297                         ;
+;     normal            ; 860                         ;
+;         2 data inputs ; 131                         ;
+;         3 data inputs ; 132                         ;
+;         4 data inputs ; 159                         ;
+;         5 data inputs ; 181                         ;
+;         6 data inputs ; 257                         ;
+; boundary_port         ; 77                          ;
+;                       ;                             ;
+; Max LUT depth         ; 15.00                       ;
+; Average LUT depth     ; 5.36                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+    Info: Processing started: Thu Dec 02 22:17:22 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project -c Top
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file tb_ram.v
+    Info (12023): Found entity 1: tb_ram File: C:/altera_lite/15.1/VL/Project/tb_ram.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file register_r.v
+    Info (12023): Found entity 1: register_r File: C:/altera_lite/15.1/VL/Project/register_r.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: ram File: C:/altera_lite/15.1/VL/Project/ram.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mx3_32bits.v
+    Info (12023): Found entity 1: mx3_32bits File: C:/altera_lite/15.1/VL/Project/mx3_32bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mx2_8bits.v
+    Info (12023): Found entity 1: mx2_8bits File: C:/altera_lite/15.1/VL/Project/mx2_8bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mx2.v
+    Info (12023): Found entity 1: mx2 File: C:/altera_lite/15.1/VL/Project/mx2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bus.v
+    Info (12023): Found entity 1: bus File: C:/altera_lite/15.1/VL/Project/bus.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file address_decoder.v
+    Info (12023): Found entity 1: address_decoder File: C:/altera_lite/15.1/VL/Project/address_decoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file write_operation.v
+    Info (12023): Found entity 1: write_operation File: C:/altera_lite/15.1/VL/Project/write_operation.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register32_8.v
+    Info (12023): Found entity 1: register32_8 File: C:/altera_lite/15.1/VL/Project/register32_8.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_w_mul.v
+    Info (12023): Found entity 1: ALU_w_mul File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register32_r_en.v
+    Info (12023): Found entity 1: register32_r_en File: C:/altera_lite/15.1/VL/Project/register32_r_en.v Line: 1
+Info (12021): Found 21 design units, including 21 entities, in source file gates.v
+    Info (12023): Found entity 1: _inv File: C:/altera_lite/15.1/VL/Project/gates.v Line: 1
+    Info (12023): Found entity 2: _nand2 File: C:/altera_lite/15.1/VL/Project/gates.v Line: 8
+    Info (12023): Found entity 3: _and2 File: C:/altera_lite/15.1/VL/Project/gates.v Line: 15
+    Info (12023): Found entity 4: _or2 File: C:/altera_lite/15.1/VL/Project/gates.v Line: 22
+    Info (12023): Found entity 5: _xor2 File: C:/altera_lite/15.1/VL/Project/gates.v Line: 29
+    Info (12023): Found entity 6: _and3 File: C:/altera_lite/15.1/VL/Project/gates.v Line: 44
+    Info (12023): Found entity 7: _and4 File: C:/altera_lite/15.1/VL/Project/gates.v Line: 51
+    Info (12023): Found entity 8: _and5 File: C:/altera_lite/15.1/VL/Project/gates.v Line: 58
+    Info (12023): Found entity 9: _or3 File: C:/altera_lite/15.1/VL/Project/gates.v Line: 65
+    Info (12023): Found entity 10: _or4 File: C:/altera_lite/15.1/VL/Project/gates.v Line: 72
+    Info (12023): Found entity 11: _or5 File: C:/altera_lite/15.1/VL/Project/gates.v Line: 79
+    Info (12023): Found entity 12: _inv_4bits File: C:/altera_lite/15.1/VL/Project/gates.v Line: 86
+    Info (12023): Found entity 13: _and2_4bits File: C:/altera_lite/15.1/VL/Project/gates.v Line: 93
+    Info (12023): Found entity 14: _or2_4bits File: C:/altera_lite/15.1/VL/Project/gates.v Line: 100
+    Info (12023): Found entity 15: _xor2_4bits File: C:/altera_lite/15.1/VL/Project/gates.v Line: 107
+    Info (12023): Found entity 16: _xnor2_4bits File: C:/altera_lite/15.1/VL/Project/gates.v Line: 117
+    Info (12023): Found entity 17: _inv_32bits File: C:/altera_lite/15.1/VL/Project/gates.v Line: 126
+    Info (12023): Found entity 18: _and2_32bits File: C:/altera_lite/15.1/VL/Project/gates.v Line: 133
+    Info (12023): Found entity 19: _or2_32bits File: C:/altera_lite/15.1/VL/Project/gates.v Line: 140
+    Info (12023): Found entity 20: _xor2_32bits File: C:/altera_lite/15.1/VL/Project/gates.v Line: 147
+    Info (12023): Found entity 21: _xnor2_32bits File: C:/altera_lite/15.1/VL/Project/gates.v Line: 161
+Info (12021): Found 1 design units, including 1 entities, in source file tb_multiplier.v
+    Info (12023): Found entity 1: tb_multiplier File: C:/altera_lite/15.1/VL/Project/tb_multiplier.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file tb_alu32.v
+    Info (12023): Found entity 1: tb_alu32 File: C:/altera_lite/15.1/VL/Project/tb_alu32.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file shift_logic.v
+    Info (12023): Found entity 1: shift_logic File: C:/altera_lite/15.1/VL/Project/shift_logic.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register64_r_en.v
+    Info (12023): Found entity 1: register64_r_en File: C:/altera_lite/15.1/VL/Project/register64_r_en.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register10_r_en.v
+    Info (12023): Found entity 1: register12_r_en File: C:/altera_lite/15.1/VL/Project/register10_r_en.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file next_state_mul.v
+    Info (12023): Found entity 1: next_state_mul File: C:/altera_lite/15.1/VL/Project/next_state_mul.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mx2_32bits.v
+    Info (12023): Found entity 1: mx2_32bits File: C:/altera_lite/15.1/VL/Project/mx2_32bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
+    Info (12023): Found entity 1: multiplier File: C:/altera_lite/15.1/VL/Project/multiplier.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fa_v2.v
+    Info (12023): Found entity 1: fa_v2 File: C:/altera_lite/15.1/VL/Project/fa_v2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter_mul.v
+    Info (12023): Found entity 1: counter_mul File: C:/altera_lite/15.1/VL/Project/counter_mul.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clb4.v
+    Info (12023): Found entity 1: clb4 File: C:/altera_lite/15.1/VL/Project/clb4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla64.v
+    Info (12023): Found entity 1: cla64 File: C:/altera_lite/15.1/VL/Project/cla64.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla4.v
+    Info (12023): Found entity 1: cla4 File: C:/altera_lite/15.1/VL/Project/cla4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla32.v
+    Info (12023): Found entity 1: cla32 File: C:/altera_lite/15.1/VL/Project/cla32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu32.v
+    Info (12023): Found entity 1: alu32 File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file add_logic.v
+    Info (12023): Found entity 1: add_logic File: C:/altera_lite/15.1/VL/Project/add_logic.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_alu_w_mul.v
+    Info (12023): Found entity 1: tb_ALU_w_mul File: C:/altera_lite/15.1/VL/Project/tb_ALU_w_mul.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file top.v
+    Info (12023): Found entity 1: Top File: C:/altera_lite/15.1/VL/Project/Top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_top.v
+    Info (12023): Found entity 1: tb_Top File: C:/altera_lite/15.1/VL/Project/tb_Top.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at bus.v(24): created implicit net for "S0_sel_next" File: C:/altera_lite/15.1/VL/Project/bus.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at bus.v(25): created implicit net for "S1_sel_next" File: C:/altera_lite/15.1/VL/Project/bus.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at ALU_w_mul.v(12): created implicit net for "we" File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at ALU_w_mul.v(13): created implicit net for "re" File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at ALU_w_mul.v(14): created implicit net for "op_clear" File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at multiplier.v(14): created implicit net for "next_op_done" File: C:/altera_lite/15.1/VL/Project/multiplier.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at fa_v2.v(5): created implicit net for "w0" File: C:/altera_lite/15.1/VL/Project/fa_v2.v Line: 5
+Warning (10236): Verilog HDL Implicit Net warning at counter_mul.v(8): created implicit net for "w0" File: C:/altera_lite/15.1/VL/Project/counter_mul.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at alu32.v(18): created implicit net for "w_start" File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at add_logic.v(27): created implicit net for "w0" File: C:/altera_lite/15.1/VL/Project/add_logic.v Line: 27
+Info (12127): Elaborating entity "Top" for the top level hierarchy
+Info (12128): Elaborating entity "bus" for hierarchy "bus:U0_bus" File: C:/altera_lite/15.1/VL/Project/Top.v Line: 14
+Info (12128): Elaborating entity "register_r" for hierarchy "bus:U0_bus|register_r:U0_resgister_r" File: C:/altera_lite/15.1/VL/Project/bus.v Line: 13
+Info (12128): Elaborating entity "mx2" for hierarchy "bus:U0_bus|mx2:U1_mx2" File: C:/altera_lite/15.1/VL/Project/bus.v Line: 16
+Info (12128): Elaborating entity "_inv" for hierarchy "bus:U0_bus|mx2:U1_mx2|_inv:U0_inv" File: C:/altera_lite/15.1/VL/Project/mx2.v Line: 7
+Info (12128): Elaborating entity "_nand2" for hierarchy "bus:U0_bus|mx2:U1_mx2|_nand2:U1_nand2" File: C:/altera_lite/15.1/VL/Project/mx2.v Line: 8
+Info (12128): Elaborating entity "mx2_8bits" for hierarchy "bus:U0_bus|mx2_8bits:U1_mx2_8bits" File: C:/altera_lite/15.1/VL/Project/bus.v Line: 17
+Info (12128): Elaborating entity "mx2_32bits" for hierarchy "bus:U0_bus|mx2_32bits:U1_mx2_32bits" File: C:/altera_lite/15.1/VL/Project/bus.v Line: 18
+Info (12128): Elaborating entity "address_decoder" for hierarchy "bus:U0_bus|address_decoder:U2_address_decoder" File: C:/altera_lite/15.1/VL/Project/bus.v Line: 21
+Info (12128): Elaborating entity "mx3_32bits" for hierarchy "bus:U0_bus|mx3_32bits:U3_mx3_32bits" File: C:/altera_lite/15.1/VL/Project/bus.v Line: 26
+Info (12128): Elaborating entity "ALU_w_mul" for hierarchy "ALU_w_mul:U1_ALU_w_mul" File: C:/altera_lite/15.1/VL/Project/Top.v Line: 16
+Warning (10235): Verilog HDL Always Construct warning at ALU_w_mul.v(32): variable "re" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 32
+Warning (10235): Verilog HDL Always Construct warning at ALU_w_mul.v(33): variable "re" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 33
+Warning (10235): Verilog HDL Always Construct warning at ALU_w_mul.v(34): variable "re" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 34
+Warning (10235): Verilog HDL Always Construct warning at ALU_w_mul.v(39): variable "result1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 39
+Warning (10235): Verilog HDL Always Construct warning at ALU_w_mul.v(40): variable "result2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 40
+Warning (10235): Verilog HDL Always Construct warning at ALU_w_mul.v(41): variable "op_done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 41
+Info (12128): Elaborating entity "write_operation" for hierarchy "ALU_w_mul:U1_ALU_w_mul|write_operation:U0_write_operation" File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 17
+Info (12128): Elaborating entity "register32_8" for hierarchy "ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8" File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 26
+Info (12128): Elaborating entity "register32_r_en" for hierarchy "ALU_w_mul:U1_ALU_w_mul|register32_8:U1_register32_8|register32_r_en:U0_register32_r_en" File: C:/altera_lite/15.1/VL/Project/register32_8.v Line: 8
+Info (12128): Elaborating entity "alu32" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32" File: C:/altera_lite/15.1/VL/Project/ALU_w_mul.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at alu32.v(36): variable "result1_before" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 36
+Warning (10235): Verilog HDL Always Construct warning at alu32.v(36): variable "result2_before" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 36
+Warning (10235): Verilog HDL Always Construct warning at alu32.v(64): variable "result1_before" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 64
+Warning (10235): Verilog HDL Always Construct warning at alu32.v(64): variable "result2_before" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 64
+Info (12128): Elaborating entity "_inv_32bits" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|_inv_32bits:U0_inv_32bits" File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 20
+Info (12128): Elaborating entity "_and2_32bits" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|_and2_32bits:U2_and2_32bits" File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 22
+Info (12128): Elaborating entity "_or2_32bits" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|_or2_32bits:U3_or2_32bits" File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 23
+Info (12128): Elaborating entity "_xor2_32bits" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|_xor2_32bits:U4_xor2_32bits" File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 24
+Info (12128): Elaborating entity "_xor2_4bits" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|_xor2_32bits:U4_xor2_32bits|_xor2_4bits:U0_xor2_4bits" File: C:/altera_lite/15.1/VL/Project/gates.v Line: 151
+Info (12128): Elaborating entity "_xor2" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|_xor2_32bits:U4_xor2_32bits|_xor2_4bits:U0_xor2_4bits|_xor2:U0_xor2" File: C:/altera_lite/15.1/VL/Project/gates.v Line: 111
+Info (12128): Elaborating entity "_and2" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|_xor2_32bits:U4_xor2_32bits|_xor2_4bits:U0_xor2_4bits|_xor2:U0_xor2|_and2:and0" File: C:/altera_lite/15.1/VL/Project/gates.v Line: 38
+Info (12128): Elaborating entity "_or2" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|_xor2_32bits:U4_xor2_32bits|_xor2_4bits:U0_xor2_4bits|_xor2:U0_xor2|_or2:or0" File: C:/altera_lite/15.1/VL/Project/gates.v Line: 41
+Info (12128): Elaborating entity "_xnor2_32bits" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|_xnor2_32bits:U5_xnor2_32bits" File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 25
+Info (12128): Elaborating entity "_xnor2_4bits" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|_xnor2_32bits:U5_xnor2_32bits|_xnor2_4bits:U0_xnor2_4bits" File: C:/altera_lite/15.1/VL/Project/gates.v Line: 165
+Info (12128): Elaborating entity "_inv_4bits" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|_xnor2_32bits:U5_xnor2_32bits|_xnor2_4bits:U0_xnor2_4bits|_inv_4bits:U1_inv_4bits" File: C:/altera_lite/15.1/VL/Project/gates.v Line: 123
+Info (12128): Elaborating entity "cla32" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32" File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 28
+Info (12128): Elaborating entity "cla4" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4" File: C:/altera_lite/15.1/VL/Project/cla32.v Line: 9
+Info (12128): Elaborating entity "fa_v2" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|fa_v2:U0_fa" File: C:/altera_lite/15.1/VL/Project/cla4.v Line: 9
+Info (12128): Elaborating entity "clb4" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|clb4:U4_clb4" File: C:/altera_lite/15.1/VL/Project/cla4.v Line: 13
+Info (12128): Elaborating entity "_and3" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|clb4:U4_clb4|_and3:and3C2" File: C:/altera_lite/15.1/VL/Project/clb4.v Line: 32
+Info (12128): Elaborating entity "_or3" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|clb4:U4_clb4|_or3:or3C2" File: C:/altera_lite/15.1/VL/Project/clb4.v Line: 33
+Info (12128): Elaborating entity "_and4" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|clb4:U4_clb4|_and4:and4C3" File: C:/altera_lite/15.1/VL/Project/clb4.v Line: 39
+Info (12128): Elaborating entity "_or4" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|clb4:U4_clb4|_or4:or4C3" File: C:/altera_lite/15.1/VL/Project/clb4.v Line: 40
+Info (12128): Elaborating entity "_and5" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|clb4:U4_clb4|_and5:and5Co" File: C:/altera_lite/15.1/VL/Project/clb4.v Line: 51
+Info (12128): Elaborating entity "_or5" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|cla32:U7_cla32|cla4:U1_cla4|clb4:U4_clb4|_or5:or5Co" File: C:/altera_lite/15.1/VL/Project/clb4.v Line: 52
+Info (12128): Elaborating entity "multiplier" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier" File: C:/altera_lite/15.1/VL/Project/alu32.v Line: 30
+Info (12128): Elaborating entity "next_state_mul" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|next_state_mul:U0_next_state_mul" File: C:/altera_lite/15.1/VL/Project/multiplier.v Line: 14
+Warning (10235): Verilog HDL Always Construct warning at next_state_mul.v(34): variable "input_multiplier" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/next_state_mul.v Line: 34
+Warning (10235): Verilog HDL Always Construct warning at next_state_mul.v(35): variable "input_multiplicand" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/next_state_mul.v Line: 35
+Warning (10235): Verilog HDL Always Construct warning at next_state_mul.v(42): variable "cur_multiplier" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/next_state_mul.v Line: 42
+Warning (10235): Verilog HDL Always Construct warning at next_state_mul.v(52): variable "cur_multiplier" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/next_state_mul.v Line: 52
+Info (12128): Elaborating entity "counter_mul" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|counter_mul:U1_counter_mul" File: C:/altera_lite/15.1/VL/Project/multiplier.v Line: 15
+Warning (10235): Verilog HDL Always Construct warning at counter_mul.v(13): variable "dec_count" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/counter_mul.v Line: 13
+Info (12128): Elaborating entity "cla64" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|counter_mul:U1_counter_mul|cla64:U0_cla64" File: C:/altera_lite/15.1/VL/Project/counter_mul.v Line: 8
+Info (12128): Elaborating entity "register12_r_en" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register12_r_en:U2_register_12_r_en" File: C:/altera_lite/15.1/VL/Project/multiplier.v Line: 18
+Info (12128): Elaborating entity "register64_r_en" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|register64_r_en:U5_register_64_r_en" File: C:/altera_lite/15.1/VL/Project/multiplier.v Line: 21
+Info (12128): Elaborating entity "add_logic" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|add_logic:U6_add_logic" File: C:/altera_lite/15.1/VL/Project/multiplier.v Line: 24
+Warning (10235): Verilog HDL Always Construct warning at add_logic.v(35): variable "mul_0" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/add_logic.v Line: 35
+Warning (10235): Verilog HDL Always Construct warning at add_logic.v(36): variable "mul_add_m" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/add_logic.v Line: 36
+Warning (10235): Verilog HDL Always Construct warning at add_logic.v(37): variable "mul_add_m" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/add_logic.v Line: 37
+Warning (10235): Verilog HDL Always Construct warning at add_logic.v(38): variable "mul_add_2m" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/add_logic.v Line: 38
+Warning (10235): Verilog HDL Always Construct warning at add_logic.v(39): variable "mul_sub_2m" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/add_logic.v Line: 39
+Warning (10235): Verilog HDL Always Construct warning at add_logic.v(40): variable "mul_sub_m" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/add_logic.v Line: 40
+Warning (10235): Verilog HDL Always Construct warning at add_logic.v(41): variable "mul_sub_m" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/add_logic.v Line: 41
+Warning (10235): Verilog HDL Always Construct warning at add_logic.v(42): variable "mul_0" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/altera_lite/15.1/VL/Project/add_logic.v Line: 42
+Info (12128): Elaborating entity "shift_logic" for hierarchy "ALU_w_mul:U1_ALU_w_mul|alu32:U1_alu32|multiplier:U8_multiplier|shift_logic:U7_shift_logic" File: C:/altera_lite/15.1/VL/Project/multiplier.v Line: 25
+Info (12128): Elaborating entity "ram" for hierarchy "ram:U2_ram" File: C:/altera_lite/15.1/VL/Project/Top.v Line: 18
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "ram:U2_ram|mem" is uninferred due to asynchronous read logic File: C:/altera_lite/15.1/VL/Project/ram.v Line: 8
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/altera_lite/15.1/VL/Project/output_files/Top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2506 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 44 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 2429 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 5101 megabytes
+    Info: Processing ended: Thu Dec 02 22:17:35 2021
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:19
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/altera_lite/15.1/VL/Project/output_files/Top.map.smsg.
+
+
